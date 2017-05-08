@@ -1,0 +1,24 @@
+<h1>Welcome Approver</h1>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>File Name</th>
+    <th>Comments</th>
+    <th>Options</th>
+  </tr>
+  </thead>
+  <tbody *ngFor="let data of userData">
+	<tr *ngFor="let files of data.files">
+		<td>{{files}}</td>
+    <td>{{data.email}}</td>
+    <td><form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form></td>
+    <td><button (click)="download(files)">Download</button></td>
+	</tr>
+  </tbody>
+</table>

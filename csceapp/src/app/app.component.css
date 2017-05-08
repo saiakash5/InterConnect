@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+header {
+    background-color: #4C4;
+    min-height: 40px;
+    width: 100%;
+}
+
+.custom-navbar-color{
+	background-color: brown!important;
+	
+}
+
+.menu-font-color{
+	color: #fff;
+}
+

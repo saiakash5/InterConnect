@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark  custom-navbar-color">
+  <div class="container-fluid text-white ">
+    <div class="navbar-header">
+      <a [routerLink]="['/HomePage']" class="navbar-brand menu-font-color custom-font-family" href="#">InterConnect</a>
+    </div>
+    <ul class="nav navbar-nav navbar">
+
+
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" *ngIf="logoutstatus==false" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white">Login<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a  [routerLink]="['/login']"  *ngIf="loginstatus" href="#">Registered User</a></li>
+          <li><a  [routerLink]="['/approverlogin']" *ngIf="loginstatus" href="#">Admin</a></li>
+        </ul>
+      </li>
+
+      <li><a  [routerLink]="['/signup']" *ngIf="loginstatus" href="#" style="color: white">Signup</a></li>
+      <li><a  [routerLink]="['/detail']" *ngIf="logoutstatus==true" href="#" style="color: white">Profile</a></li>
+      <li><a class="menu-font-color custom-font-family text-white" *ngIf="logoutstatus==true" (click)="logout()" href="#" style="color: white">Logout</a></li>
+
+
+
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid body-content">
+	<router-outlet></router-outlet>
+</div>
